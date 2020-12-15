@@ -12,16 +12,16 @@ public class DataDisplay : MonoBehaviour
 
     [SerializeField] private ToggleState _toggleState;
 
-    public void DataDisplayy(DataStruct data, int id)
+    public void DataAssignment(DataStruct data, int id)
     {
-        if (ColorUtility.TryParseHtmlString(data.Color, out Color newColor))
+        if (ColorUtility.TryParseHtmlString(data.color, out Color newColor))
             _color.color = newColor;
 
-        _state.isOn = data.State;
-        _header.text = data.Header;
-        _tag.text = data.Tag;
-        _distance.text = data.Distance;
+        _state.isOn = data.state;
+        _header.text = data.header;
+        _tag.text = data.tag;
+        _distance.text = data.distance;
 
-        _toggleState.Id = id;
+        _toggleState.id = id;
     }
 }

@@ -16,7 +16,7 @@ public class ChangeToggleState : MonoBehaviour
 
     private void ToggleChange(bool isOn, int id)
     {
-        _dataFiller.DataArray[id].State = isOn;
-        _jsonReader.SaveToFile(_dataFiller.DataArray);
+        _dataFiller.dataArray[id].state = isOn;
+        _jsonReader.SaveToFile(_dataFiller.dataArray);
     }
 }

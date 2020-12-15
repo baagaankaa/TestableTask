@@ -5,7 +5,7 @@ public class DataFiller : MonoBehaviour
     [SerializeField] private Transform _container;
     [SerializeField] private GameObject _boxData;
 
-    public DataStruct[] DataArray;
+    public DataStruct[] dataArray;
 
     public void FillContainer()
     {
@@ -14,11 +14,10 @@ public class DataFiller : MonoBehaviour
 
         try
         {
-            for (int i = 0; i < DataArray.Length; i++)
+            for (int i = 0; i < dataArray.Length; i++)
             {
-
                 var data = Instantiate(_boxData.gameObject, _container);
-                data.GetComponent<DataDisplay>().DataDisplayy(DataArray[i], i);
+                data.GetComponent<DataDisplay>().DataAssignment(dataArray[i], i);
             }
         }
         catch (System.Exception)

@@ -1,16 +1,16 @@
 ﻿[System.Serializable]
 public class DataList
 {
-    public DataStruct[] DataStruct;
+    public DataStruct[] dataStruct;
 }
 
 [System.Serializable]
 public struct DataStruct
 {
-    public string Color;
-    public bool State;
+    public string color;
+    public bool state;
 
-    public string Header;
-    public string Tag;
-    public string Distance;
+    public string header;
+    public string tag;
+    public string distance;
 }

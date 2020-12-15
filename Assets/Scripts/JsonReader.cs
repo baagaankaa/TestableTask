@@ -30,7 +30,7 @@ public class JsonReader : MonoBehaviour
             string json = File.ReadAllText(_path);
 
             DataList dataList = JsonUtility.FromJson<DataList>(json);
-            _dataFiller.DataArray = dataList.DataStruct;
+            _dataFiller.dataArray = dataList.dataStruct;
         }
         catch (Exception e)
         {
@@ -44,7 +44,7 @@ public class JsonReader : MonoBehaviour
     {
         try
         {
-            string json = "{\n \t \"DataStruct\":[\n";
+            string json = "{\n \t \"dataStruct\":[\n";
             for (int i = 0; i < array.Length; i++)
             {
                 json += JsonUtility.ToJson(array[i], true);
@@ -63,7 +63,7 @@ public class JsonReader : MonoBehaviour
 
     public void UpdateData()
     {
-        SaveToFile(_dataFiller.DataArray);
+        SaveToFile(_dataFiller.dataArray);
         LoadFromFile();
     }
 }
